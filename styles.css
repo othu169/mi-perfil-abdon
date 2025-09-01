@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f4f4f4, #d9e4ec);
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+/* Encabezado y Pie */
+header, footer {
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+main:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: #007acc;
+  transition: color 0.3s;
+}
+
+h2:hover {
+  color: #005f99;
+}
+
+section {
+  margin-bottom: 25px;
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+/* Chips o etiquetas */
+.chips span {
+  display: inline-block;
+  background-color: #e0f7fa;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  color: #00796b;
+  border: 1px solid #b2ebf2;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.chips span:hover {
+  background-color: #b2ebf2;
+  transform: scale(1.1);
+}
+
+/* Listas */
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Enlaces */
+a {
+  color: #007acc;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #007acc;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+a:hover {
+  color: #005f99;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Botón especial (ej. para contacto) */
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #005f99;
+  transform: scale(1.05);
+}
+
+/* Collage de imágenes simétrico */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.collage img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .chips span {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .collage {
+    grid-template-columns: 1fr 1fr;
+  }
+}
